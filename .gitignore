@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Warehouse / experiment outputs (regenerate locally)
+*.pt
+warehouse/
+experiment/
+runs/
+*.log
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

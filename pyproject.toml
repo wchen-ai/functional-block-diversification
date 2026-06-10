@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "warehouse-adopt"
+version = "0.1.0"
+description = "Functional Block Diversification (FBD): source-free block-warehouse diversification of pretrained checkpoints — decompose, diversify, assemble sub-models (offline/online). Uncertainty, federated, and active-learning applications included."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Weijie Chen"}]
+requires-python = ">=3.10"
+dependencies = ["torch>=2.0"]
+
+[project.optional-dependencies]
+vision = ["torchvision"]
+timm = ["timm"]
+hf = ["transformers"]
+test = ["pytest", "torchvision"]
+
+[project.scripts]
+warehouse-adopt = "warehouse_adopt.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["warehouse_adopt*"]
